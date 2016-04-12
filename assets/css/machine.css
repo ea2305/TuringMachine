@@ -1,0 +1,34 @@
+.machine{
+    position: fixed;
+    width: 80%;
+    height: 80vh;
+    top : 10vh;
+    left: 10%;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/*Estilos de cabezla y linea */
+.head{
+    width: 100%;
+    height: 20vh;
+}
+
+.head .cabezal{
+    height: 5vh;
+}
+
+.head .cabezal .pointer{
+    position: absolute;
+    left : 10%;
+    width: 0%;
+    height: 5vh;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-width: 5vh 5vw 0px 5vw;
+
+}
+/*end block*/
+
+.body{
+    text-align : center;
+}

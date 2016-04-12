@@ -1,0 +1,120 @@
+@font-face {
+font-family: 'Chonker';
+src:
+    local('Chonker'),
+    url('../fonts/Chonker.ttf');
+}
+
+html body{
+    margin : 0px;
+    padding : 0px;
+    background-color: tomato;
+    font-family: 'Chonker';
+}
+
+input{
+    font-family: 'Chonker';
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    position: fixed;
+    width: 80%;
+    height: 80vh;
+    top : 10vh;
+    left: 10%;
+    box-shadow: 10px 10px 5px #888888;
+    display: inline-flex;
+}
+
+.border-style{
+    border-color:#9C2903;
+    border-width: 7px;
+    border-style: double;
+}
+
+.getData{
+    font-family: 'Chonker';
+    padding-top: 30%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.getData input{
+
+}
+
+.getData textarea{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-family: 'Chonker';
+}
+
+.information{
+    font-family: 'Chonker';
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.important{
+    font-weight: bold;
+}
+
+/*Color classes*/
+    .c-low-yellow{
+        background-color:  #FFDC6C;
+    }
+
+    .c-soft-yellow{
+        background-color:  #FFD55D;
+    }
+
+    .c-medium-yellow{
+        background-color: #FFAB1A;
+    }
+
+    .c-hard-yellow{
+        background-color: #F0920D;
+    }
+
+    .c-hard-brown{
+        background-color: #9C2903;
+    }
+
+    .c-white{
+        background-color: #F2F1E9;
+    }
+/*End backgrounds*/
+
+/*Font color*/
+    .cf-low-yellow{
+        color:  #FFDC6C;
+    }
+
+    .cf-soft-yellow{
+        color:  #FFD55D;
+    }
+
+    .cf-medium-yellow{
+        color: #FFAB1A;
+    }
+
+    .cf-hard-tellow{
+        color: #F0920D;
+    }
+
+    .cf-hard-brown{
+        color: #9C2903;
+    }
+
+    .cf-white{
+        color: #F2F1E9;
+    }
+/*End*/
