@@ -94,3 +94,50 @@
     bottom: 35%;
     left: 50%%;
 }
+
+.transition-table{
+    width: 50%;
+    height: 20vh;
+    overflow-y: auto;
+}
+
+.InformationTable{
+    display: flex;
+}
+
+.current-state{
+    width: 50%;
+    height: 20vh;
+}
+
+.table-element{
+    background: white;
+    margin: 1px;
+    padding: 1px;
+    background: rgb(255, 192, 52);
+}
+
+.function-transition{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+
+.function-transition div{
+    width: 100%;
+}
+
+.function-transition-head{
+    width: 100%;
+    height: 20%;
+    display: flex;
+
+}
+
+
+.function-transition-head div{
+    width: 100%;
+    background: black;
+    color : white;
+}

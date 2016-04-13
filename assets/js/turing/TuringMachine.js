@@ -42,7 +42,7 @@ class TuringMachine {
         position: position,
         transition: transition
       });
-      
+
       tape[position] = transition.writeSymbol;
       (transition.moveTape === 'R') ? position++ : position--;
 
