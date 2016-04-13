@@ -5,11 +5,31 @@ src:
     url('../fonts/Chonker.ttf');
 }
 
+button{
+    transition : all .3s;
+    background: black none repeat scroll 0% 0%;
+    color: white;
+    height: 40px;
+    width: 40%;
+    font-family: Chonker;
+    border: 3px solid white;
+}
+
+button:hover{
+    background: white;
+    color :black;
+}
+
+
+
 html body{
     margin : 0px;
     padding : 0px;
-    background-color: tomato;
+    background-image: url("../img/machine.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     font-family: 'Chonker';
+    overflow: hidden;
 }
 
 input{
@@ -39,14 +59,16 @@ input{
 
 .getData{
     font-family: 'Chonker';
-    padding-top: 30%;
+    padding-top: 15%;
     text-align: center;
     height: 100%;
     width: 100%;
 }
 
 .getData input{
-
+    width: 40%;
+    height: 30px;
+    font-size: 13px;
 }
 
 .getData textarea{
@@ -61,6 +83,11 @@ input{
     height: 100%;
     width: 100%;
     text-align: center;
+    border-left:  1px solid black;
+}
+
+.information h2{
+    margin-top: 20%;
 }
 
 .important{

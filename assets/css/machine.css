@@ -8,27 +8,89 @@
 }
 
 /*Estilos de cabezla y linea */
-.head{
-    width: 100%;
-    height: 20vh;
-}
+    .head{
+        background: linear-gradient(black,gray);
+        width: 100%;
+        height: 24vh;
+    }
 
-.head .cabezal{
-    height: 5vh;
-}
+    .head .cabezal{
+        height: 6vh;
+    }
 
-.head .cabezal .pointer{
-    position: absolute;
-    left : 10%;
-    width: 0%;
-    height: 5vh;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-    border-width: 5vh 5vw 0px 5vw;
+    .head .cabezal .pointer{
+        background-color: rgb(215, 196, 152);
+        position: absolute;
+        left : 38%;
+        width: 0%;
+        height: 6vh;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        border-width: 6vh 4vw 0px 4vw;
 
-}
+    }
 /*end block*/
+
+/*Estilo de digito en cabecera*/
+    .tape{
+
+    }
+    .digit{
+        opacity: 0;
+        position: absolute;
+        bottom: 10%;
+        border: 1px black solid;
+        width: 10%;;
+        height: 10vh;
+        background: linear-gradient(gray, white 51%,gray);
+    }
+
+    .font-digit{
+        margin: 0px;
+        margin-top: 2vh;
+        padding: 0px;
+        text-align: center;
+        font-size: 7vh;
+    }
+/*Fin de bloque*/
 
 .body{
     text-align : center;
+    width: 100%;
+    height: 50vh;
+    border-bottom: 5px solid black;
+}
+
+.body #start-simulation{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: black none repeat scroll 0% 0%;
+    color: white;
+    font-family: Chonker;
+    font-size: 1rem;
+}
+
+.results-turing{
+    font-size: 3rem;
+}
+
+.current{
+    background: linear-gradient(gray, rgb(199, 194, 159) 51%,gray);
+
+}
+
+#right{
+    position: absolute;
+    bottom: 35%;
+    left: 10%;
+}
+
+#left{
+    position: absolute;
+    bottom: 35%;
+    left: 50%%;
 }
