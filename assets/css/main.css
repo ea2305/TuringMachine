@@ -145,3 +145,9 @@ input{
         color: #F2F1E9;
     }
 /*End*/
+
+
+/*Functions*/
+.disable{
+    cursor: not-allowed;
+}
