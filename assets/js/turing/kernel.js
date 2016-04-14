@@ -78,13 +78,29 @@ class kernel {
       kernel.strCleanSpaces(_F).split(',')
     );
   }
+  static getTape(tape){
+    return(
+      kernel.strCleanSpaces(tape).split(',')
+    );
+  }
+  static updateData(){
+    _Q = tm._Q;
+    _Gamma = tm._Gamma;
+    b = tm.b;
+    _Sigma = tm._Sigma;
+    delta = tm.delta;
+    q0 = tm.q0;
+    _F = tm._F;
+  }
 }
 
-var tm = "hola";
+var tm;
+var tape;
 
 $(document).ready(function() {
 
   $('#start').click(function(){
+    tape = kernel.getTape($('input:text[name=tape]').val());
     tm = new TuringMachine(
       kernel.getQ($('input:text[name=_Q]').val()),
       kernel.getGamma($('input:text[name=_T]').val()),
@@ -94,6 +110,7 @@ $(document).ready(function() {
       kernel.getQ0($('input:text[name=q0]').val()),
       kernel.getF($('input:text[name=_F]').val())
     );
+    kernel.updateData();
   });
 
 });
