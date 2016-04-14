@@ -137,7 +137,7 @@ function moveTapeRight(){
 //Llamada a maquina de turing
 function callTuringMachine(){
 
-    var tm = new TuringMachine(_Q, _Gamma, b, _Sigma, delta, q0, _F);//instancia
+  console.log(tm);
 
     //var result = tm.run(tape, tape.length - 1);
     var result = tm.run(tape, 0);

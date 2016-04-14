@@ -6,39 +6,94 @@ class kernel {
     }
     return newArray;
   }
+  static strCleanSpaces(string){
+    var newString = "";
+    for (var i = 0; i < string.length; i++) {
+      if(
+        string.charAt(i) !== ' ' &&
+        string.charAt(i) !== '\n'
+      )
+        newString += string.charAt(i);
+    }
+    return newString;
+  }
+  static strCleanLlaves(string){
+    var newString = "";
+    for (var i = 0; i < string.length; i++) {
+      if(
+        string.charAt(i) !== '{' &&
+        string.charAt(i) !== '}'
+      )
+        newString += string.charAt(i);
+    }
+    return newString;
+  }
+
   static getQ(_Q){
-    console.log("_Q: " + _Q);
+    return(
+      kernel.strCleanSpaces(_Q).split(',')
+    );
   }
   static getGamma(_Gamma){
-    console.log("_Gamma: " + _Gamma);
+    return(
+      kernel.strCleanSpaces(_Gamma).split(',')
+    );
   }
   static getB(b){
-    console.log("b: " + b);
+    return(
+      kernel.strCleanSpaces(b)
+    );
   }
   static getSigma(_Sigma){
-    console.log("_Sigma: " + _Sigma);
+    return(
+      kernel.strCleanSpaces(_Sigma).split(',')
+    );
   }
   static getDelta(delta){
-    console.log("delta: " + delta);
+    var arrayObjDelta = [];
+    var strDelta = kernel.strCleanSpaces(delta);
+    var arrayDelta = strDelta.split("},");
+    for (var i = 0; i < arrayDelta.length; i++) {
+      arrayDelta[i] = kernel.strCleanLlaves(arrayDelta[i]);
+      var objDelta = arrayDelta[i].split(',');
+      if(objDelta.length === 5){
+        arrayObjDelta.push(
+          {
+            currentState:objDelta[0],
+            tapeSymbol:objDelta[1],
+            writeSymbol:objDelta[2],
+            moveTape:objDelta[3],
+            nextState:objDelta[4]
+          }
+        );
+      }
+    }
+    return arrayObjDelta;
   }
   static getQ0(q0){
-    console.log("q0: " + q0);
+    return kernel.strCleanSpaces(q0)
   }
   static getF(_F){
-    console.log("_F: " + _F);
+    return(
+      kernel.strCleanSpaces(_F).split(',')
+    );
   }
 }
+
+var tm = "hola";
 
 $(document).ready(function() {
 
   $('#start').click(function(){
-    kernel.getQ($('input:text[name=_Q]').val());
-    kernel.getGamma($('input:text[name=_T]').val());
-    kernel.getB($('input:text[name=B]').val());
-    kernel.getSigma($('input:text[name=_E]').val());
-    kernel.getDelta($('textarea[name=delta]').val());
-    kernel.getQ0($('input:text[name=q0]').val());
-    kernel.getF($('input:text[name=_F]').val());
+    tm = new TuringMachine(
+      kernel.getQ($('input:text[name=_Q]').val()),
+      kernel.getGamma($('input:text[name=_T]').val()),
+      kernel.getB($('input:text[name=B]').val()),
+      kernel.getSigma($('input:text[name=_E]').val()),
+      kernel.getDelta($('textarea[name=delta]').val()),
+      kernel.getQ0($('input:text[name=q0]').val()),
+      kernel.getF($('input:text[name=_F]').val())
+    );
   });
 
 });
