@@ -46,6 +46,7 @@ var creation = false;//Bandera de handler
 //Crea la cinta para trabajar con los datos que contiene
 function makeTape(){
 
+  tape = kernel.updateIndexTape();
     tape.forEach(function(e,index){
         if(e == undefined)
             $('.tape').append(getDigit('B',index));
