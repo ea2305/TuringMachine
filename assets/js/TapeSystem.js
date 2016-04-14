@@ -31,7 +31,7 @@ var q0 = "q0";// estado inicial
 var _F = ["q1"];// estado final
 
 //var tape = ["1","0","0","0"];// cinta con datos
-var tape = ["1","0","0","0"];// cinta con datos
+//var tape = ["1","0","0","0"];// cinta con datos se instancia en kernel
 
 //Psicion inicial
 var startPos = 40;
