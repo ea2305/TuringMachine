@@ -141,7 +141,7 @@ function callTuringMachine(){
     //var tm = new TuringMachine(_Q, _Gamma, b, _Sigma, delta, q0, _F);//instancia ya no se instancia aqui ahora en kernel
 
     //var result = tm.run(tape, tape.length - 1);
-    var result = tm.run(tape, 0);
+    var result = tm.run(tape, current);
     /* corre la maquina y reglesa el resultado
     (undefined si termino en estado no valido)*/
 
