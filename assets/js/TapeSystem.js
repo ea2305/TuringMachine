@@ -3,30 +3,7 @@ var _Q = ["q0", "q1"];//arreglo de estados
 var _Gamma = ["0", "1", undefined];// arreglo con el alfabeto de la cinta
 var b = undefined;//simbolo blanco (B)
 var _Sigma = ["0", "1"];//arreglo con el alfabeto del lenguaje
-var delta = [
-    {
-        currentState:"q0",
-        tapeSymbol: "0",
-        writeSymbol: "1",
-        moveTape: "R",
-        nextState: "q0"
-    },
-    {
-        currentState:"q0",
-        tapeSymbol: "1",
-        writeSymbol: "0",
-        moveTape: "R",
-        nextState: "q0"
-    },
-    {
-        currentState:"q0",
-        tapeSymbol: undefined,
-        writeSymbol: undefined,
-        moveTape: "L",
-        nextState: "q1"
-    },
-
-];//arreglo con la tabla de transition
+var delta = [];//arreglo con la tabla de transition
 var q0 = "q0";// estado inicial
 var _F = ["q1"];// estado final
 
