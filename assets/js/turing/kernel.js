@@ -83,6 +83,41 @@ class kernel {
       kernel.strCleanSpaces(tape).split(',')
     );
   }
+  static updateIndexTape(){
+    var box=[];
+    var element;
+    var indexMenor = kernel.getMenorIndex(Object.keys(tape));
+    var indexMayor = kernel.getMayorIndex(Object.keys(tape));
+
+    for (var i = indexMenor; i <= indexMayor; i++) {
+      box.push(tape[i]);
+    }
+    element = box.shift();
+    if(element !== tm.b) box.unshift(element);
+    element = box.pop();
+    if(element !== tm.b) box.push(element);
+    box.unshift(tm.b);
+    box.push(tm.b);
+    return box;
+  }
+  static getMenorIndex(arreglo){
+    var element = parseInt(arreglo[0]);
+    var menor = element;
+    for (var i = 1; i < arreglo.length; i++) {
+      element = parseInt(arreglo[i]);
+      menor = (element < menor) ? element : menor;
+    }
+    return menor;
+  }
+  static getMayorIndex(arreglo){
+    var element = parseInt(arreglo[0]);
+    var mayor = element;
+    for (var i = 1; i < arreglo.length; i++) {
+      element = parseInt(arreglo[i]);
+      mayor = (element > mayor) ? element : mayor;
+    }
+    return mayor;
+  }
   static updateData(){
     _Q = tm._Q;
     _Gamma = tm._Gamma;
