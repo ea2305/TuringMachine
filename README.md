@@ -1,7 +1,8 @@
 ### Turing Machine in JS
 
-##Requirements
-* No requirementsº
+## Requirements
+
+* No requirements
 
 ## TEAM : 
 * Elihu A. Cruz Albores : 143405
